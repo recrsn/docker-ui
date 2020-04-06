@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Docker UI</title>
+    <link rel="stylesheet" href="css/pure-min.css" />
+    <link rel="stylesheet" href="css/app.css" />
 </head>
+
 <body>
-    <table id="docker-ps" style="width:100%">
-        <tr>
-            <th>Container ID</th>
-            <th>Container Name</th>
-            <th>Image</th>
-        </tr>
-    </table>
+    <header class="chrome"></header>
+    <div class="content">
+        <aside class="sidebar">
+            <ul class="navlist">
+                <li>Containers</li>
+                <li>Images</li>
+                <li>Volumes</li>
+                <li>Networks</li>
+                <li class="empty"></li>
+                <li>Monitor</li>
+                <li class="empty"></li>
+                <li>Preferences</li>
+            </ul>
+        </aside>
+        <main>
+            <table class="pure-table" id="docker-ps" style="width:100%">
+                <tr>
+                    <th>Container ID</th>
+                    <th>Container Name</th>
+                    <th>Image</th>
+                </tr>
+            </table>
+        </main>
+    </div>
 </body>
 <script src="index.js"></script>
+
 </html>

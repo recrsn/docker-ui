@@ -1,0 +1,55 @@
+:root {
+    --header-height: 40px
+}
+
+html,
+body,
+.content {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: white;
+}
+
+.chrome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    z-index: 1000;
+    -webkit-app-region: drag
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+aside.sidebar {
+    width: 225px;
+    padding-top: var(--header-height)
+}
+
+.navlist {
+    list-style: none;
+    padding: 0;
+}
+
+.navlist > li {
+    padding: 1rem 2rem;
+}
+
+main {
+    background: #1b1d1e;
+    flex-grow: 1;
+    height: 100%;
+    padding: 0.5rem;
+    padding-top: var(--header-height)
+}
