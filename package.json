@@ -3,16 +3,59 @@
   "version": "1.0.0",
   "description": "Docker UI",
   "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^8.2.0"
-  },
+  "private": true,
   "dependencies": {
-    "dockerode": "^3.2.0"
+    "@craco/craco": "^5.6.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@types/react-timeago": "^4.1.1",
+    "dockerode": "^3.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-timeago": "^4.4.0",
+    "styled-components": "^5.1.0",
+    "typescript": "~3.7.2"
+  },
+  "scripts": {
+    "start": "cross-env BROWSER=launcher.js craco start",
+    "start:electron": "electron .",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx,css,html}\""
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/dockerode": "^2.5.27",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.4",
+    "@types/styled-components": "^5.1.0",
+    "cross-env": "^7.0.2",
+    "electron": "^8.2.0",
+    "prettier-eslint": "^9.0.1"
+  },
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
