@@ -1,6 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLink as RouterNavLink } from 'react-router-dom'
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
+import {
+  faCubes,
+  faCompactDisc,
+  faNetworkWired,
+  faDatabase,
+  faTachometerAlt,
+  faCog
+} from '@fortawesome/free-solid-svg-icons'
 
 const Wrapper = styled.aside`
   background: #444;
@@ -37,24 +46,36 @@ export default function Sidebar() {
     <Wrapper>
       <NavList>
         <NavItem>
-          <NavLink to="/containers">Containers</NavLink>
+          <NavLink to="/containers">
+            <Icon icon={faCubes} fixedWidth /> Containers
+          </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/images">Images</NavLink>
+          <NavLink to="/images">
+            <Icon icon={faCompactDisc} fixedWidth /> Images
+          </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/volumes">Volumes</NavLink>
+          <NavLink to="/volumes">
+            <Icon icon={faDatabase} fixedWidth /> Volumes
+          </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/networks">Networks</NavLink>
+          <NavLink to="/networks">
+            <Icon icon={faNetworkWired} fixedWidth /> Networks
+          </NavLink>
         </NavItem>
         <Separator />
         <NavItem>
-          <NavLink to="/monitor">Monitor</NavLink>
+          <NavLink to="/monitor">
+            <Icon icon={faTachometerAlt} fixedWidth /> Monitor
+          </NavLink>
         </NavItem>
         <Separator />
         <NavItem>
-          <NavLink to="/preferences">Preferences</NavLink>
+          <NavLink to="/preferences">
+            <Icon icon={faCog} fixedWidth /> Preferences
+          </NavLink>
         </NavItem>
       </NavList>
     </Wrapper>
