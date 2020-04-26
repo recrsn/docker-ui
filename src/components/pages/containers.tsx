@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import Title from '../title'
-import Container from '../container'
+import Title from '../lib/title'
+import Container from '../lib/container'
 import { ContainerInfo } from 'dockerode'
 import { listAllContainers } from '../docker/api'
+import List from '../lib/list/list'
+import ListItem from '../lib/list/list-item'
 
 export default function Containers() {
   const [containers, setContainers] = useState([] as ContainerInfo[])
@@ -17,9 +19,13 @@ export default function Containers() {
   return (
     <>
       <Title>Containers</Title>
-      {containers.map(container => (
-        <Container key={container.Id} container={container} />
-      ))}
+      <List>
+        {containers.map(container => (
+          <ListItem key={container.Id}>
+            <Container container={container} />
+          </ListItem>
+        ))}
+      </List>
     </>
   )
 }

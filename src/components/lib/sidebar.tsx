@@ -2,11 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { NavLink as RouterNavLink } from 'react-router-dom'
 
-type Props = {}
-
 const Wrapper = styled.aside`
   background: #444;
-  width: 225px;
+  min-width: 225px;
   padding-top: var(--header-height);
 `
 
@@ -34,7 +32,7 @@ const NavLink = styled(RouterNavLink).attrs(() => ({
   }
 `
 
-export default function Sidebar({}: Props) {
+export default function Sidebar() {
   return (
     <Wrapper>
       <NavList>

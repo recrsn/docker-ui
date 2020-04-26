@@ -1,7 +1,4 @@
-import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-
-type Props = { children: ReactNode }
 
 const Title = styled.h1`
   margin: 0rem;

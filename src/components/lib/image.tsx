@@ -18,10 +18,10 @@ function imageInfo(image: ImageInfo) {
 export default function Image({ image }: Props) {
   const info = imageInfo(image)
   return (
-    <div>
-      <h6>{info.displayName}</h6>
+    <>
+      <h3>{info.displayName}</h3>
       <p>{info.tags.join(', ')}</p>
       <div>{info.id.substr(7, 9)}</div>
-    </div>
+    </>
   )
 }

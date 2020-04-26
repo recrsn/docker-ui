@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import Title from '../title'
+import Title from '../lib/title'
 import { ImageInfo } from 'dockerode'
 import { listAllImages } from '../docker/api'
-import Image from '../image'
+import Image from '../lib/image'
+import { List, ListItem } from '../lib/list'
 
 type Props = {}
 
@@ -19,9 +20,13 @@ export default function Images(props: Props) {
   return (
     <>
       <Title>Images</Title>
-      {images.map(image => (
-        <Image image={image} />
-      ))}
+      <List>
+        {images.map(image => (
+          <ListItem key={image.Id}>
+            <Image image={image} />
+          </ListItem>
+        ))}
+      </List>
     </>
   )
 }
