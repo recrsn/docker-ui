@@ -1,5 +1,11 @@
 import Docker from 'dockerode'
 
+export interface DockerError {
+  code: string
+  message: string
+  cause: Error
+}
+
 const docker = new Docker()
 
 export async function listAllContainers() {

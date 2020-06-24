@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Title from '../lib/title'
 import { ImageInfo } from 'dockerode'
-import { listAllImages } from '../docker/api'
+import { listAllImages } from '../services/docker'
 import Image from '../lib/image'
 import { List, ListItem } from '../lib/list'
+import PageProps from './page-props'
 
-type Props = {}
-
-export default function Images(props: Props) {
+export default function Images(props:PageProps) {
   const [images, setImages] = useState([] as ImageInfo[])
 
   useEffect(() => {
