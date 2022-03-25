@@ -39,7 +39,7 @@
     "@types/react-router-dom": "^5.1.4",
     "@types/styled-components": "^5.1.0",
     "cross-env": "^7.0.2",
-    "electron": "^8.2.0",
+    "electron": "^13.6.6",
     "prettier-eslint": "^9.0.1"
   },
   "license": "ISC",
